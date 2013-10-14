@@ -1,0 +1,39 @@
+\documentclass{article}
+\usepackage[english]{babel}
+\usepackage{listings}
+\usepackage{hyperref}
+
+
+\title{Exercise book, Excersise 1, TDT4195}
+\author{Kim Rune Solstad}
+
+\begin{document}
+\lstset{language=Matlab}
+
+\maketitle
+
+\section*{3 Basic Image Manipulation}
+\subsection*{Task 1}
+\lstinputlisting{Task3.m}
+\subsection*{Task 2}
+The pixels in the flat field image are assigned a number slightly above 1 if less sensitive and slightly below 1 if more sensitive. This means that the corrections are given in ratios instead of hard values. Therefore we need to divide with the flat-field-matrix and not subtract.
+
+\section*{4 Filtering}
+\subsection*{Task 1}
+
+\begin{tabular}{|c|*{16}{c|}r}
+0&0&0&0&0&0& 1&2&3&4&5&4&3&2&1&0&0
+\end{tabular}
+
+\section*{5 Noise}
+\lstinputlisting{Task5.m}
+
+\section*{6 Aliasing}
+\lstinputlisting{Task6.m}
+For some reason, I end up getting three images in a row. Using the downsampling function requires me to rotate the image befoure renaming the collumns.
+
+
+\section*{Ref}
+cynanogen.com/help/maximdl/Flat-Field\_Frame\_Calibration.htm
+\end{document}
+
